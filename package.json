@@ -1,12 +1,12 @@
 {
   "name": "chaindesk",
-  "version": "0.1.365",
+  "version": "0.1.342",
   "private": true,
   "scripts": {
     "prepare": "husky install",
     "start": "next start",
-    "dev": "FORCE_COLOR=1 pnpm docker:up && turbo run dev --filter=dashboard... --filter=lp... --filter=docs... --parallel --no-cache",
-    "build": "FORCE_COLOR=1 turbo run build --filter=dashboard... --filter=lp... --filter=!react-email-client --parallel",
+    "dev": "FORCE_COLOR=1 pnpm docker:up && turbo run dev --filter=dashboard...  --parallel --no-cache",
+    "build": "FORCE_COLOR=1 turbo run build --filter=dashboard... --filter=!react-email-client --parallel --no-cache",
     "dotenv": "dotenv -e .env.local",
     "typecheck": "FORCE_COLOR=1 turbo typecheck",
     "lint": "FORCE_COLOR=1 turbo run lint --filter=!react-email-client",
@@ -41,6 +41,7 @@
     }
   },
   "devDependencies": {
+    "next": "^13.0.0",
     "cz-emoji": "1.3.2-canary.2",
     "dotenv-cli": "^7.1.0",
     "eslint": "8.36.0",
