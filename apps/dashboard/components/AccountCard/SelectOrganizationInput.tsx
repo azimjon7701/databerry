@@ -52,7 +52,7 @@ function SelectOrganizationInput({}: Props) {
 
   const [isUpdatingSession, setIsUpdatingSession] = React.useState(false);
   const getOrgsQuery = useSWR<
-  ReturnType<typeof getOrganizations>
+    Prisma.PromiseReturnType<typeof getOrganizations>
   >('/api/organizations', fetcher);
 
   const handleSwitchOrg = React.useCallback(
